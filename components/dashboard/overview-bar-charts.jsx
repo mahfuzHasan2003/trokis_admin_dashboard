@@ -22,7 +22,7 @@ const chartData = [
     { month: "September", earning: 302 },
     { month: "October", earning: 402 },
     { month: "November", earning: 502 },
-    { month: "December", earning: 752 },
+    { month: "December", earning: 140 },
 ]
 
 const chartConfig = {
@@ -46,14 +46,14 @@ export default function OverviewBarCharts() {
             <MonthYearPicker date={date} setDate={setDate} />
         </div>
 
-        <ChartContainer config={chartConfig} className="h-[40rem]">
+        <ChartContainer config={chartConfig} className="h-[20rem] w-full">
             <BarChart accessibilityLayer data={chartData} >
                 <CartesianGrid vertical={false} />
                 <XAxis
                     dataKey="month"
                     tickLine={false}
                     tickMargin={10}
-                    axisLine={false}
+                    axisLine={true}
                     tickFormatter={(value) => value.slice(0, 3)}
                 />
                 <YAxis
@@ -64,7 +64,7 @@ export default function OverviewBarCharts() {
                 />
                 <ChartTooltip
                     cursor={false}
-                    content={<ChartTooltipContent hideLabel />}
+                    content={<ChartTooltipContent />}
                 />
                 <Bar dataKey="earning" fill="var(--foreground)" radius={[8, 8, 0, 0]} />
             </BarChart>

@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
       >
         <SidebarProvider>
           <SideBar />
-          <div className="w-full">
+          <div className="w-full px-4 md:px-6">
             <TopHeader />
             {children}
           </div>

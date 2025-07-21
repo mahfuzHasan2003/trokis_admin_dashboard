@@ -1,6 +1,9 @@
+import OverviewCards from "@/components/overview-cards";
 
 export default function Home() {
   return (
-    <div>Hey</div>
+    <div>
+      <OverviewCards />
+    </div>
   );
 }

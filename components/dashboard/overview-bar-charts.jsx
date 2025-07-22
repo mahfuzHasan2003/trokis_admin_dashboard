@@ -61,10 +61,11 @@ export default function OverviewBarCharts() {
                     tickLine={true}
                     tickMargin={10}
                     axisLine={true}
+                    tickFormatter={val => `$${val}`}
                 />
                 <ChartTooltip
                     cursor={false}
-                    content={<ChartTooltipContent />}
+                    content={<ChartTooltipContent indicator="dashed" />}
                 />
                 <Bar dataKey="earning" fill="var(--foreground)" radius={[8, 8, 0, 0]} />
             </BarChart>

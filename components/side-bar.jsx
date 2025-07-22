@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
-import { Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarProvider } from "./ui/sidebar";
+import { Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "./ui/sidebar";
 import Image from "next/image";
 import { menuItems } from "@/constants";
 
@@ -9,7 +9,7 @@ export default function SideBar() {
    <Sidebar>
       <SidebarHeader>
          <Link href={"/dashboard"}>
-            <Image src={"/brand-logo.png"} width={200} height={50} className="mx-auto" alt="Brand logo" />
+            <Image src={"/brand-logo.png"} width={200} height={50} alt="Brand logo" />
          </Link>
       </SidebarHeader>
 
@@ -19,10 +19,10 @@ export default function SideBar() {
                {menuItems.map((menu) => (
                   <SidebarMenuItem key={menu.title}>
                      <SidebarMenuButton asChild>
-                        <a href={menu.url}>
+                        <Link href={menu.url} className="text-xl">
                            <menu.icon />
                            <span>{menu.title}</span>
-                        </a>
+                        </Link>
                      </SidebarMenuButton>
                   </SidebarMenuItem>
                ))}

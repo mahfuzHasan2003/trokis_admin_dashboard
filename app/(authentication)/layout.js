@@ -9,9 +9,7 @@ export default function AuthLayout({ children }) {
       <div
          className={`h-dvh flex items-center justify-center`}
       >
-         <div className="">
-            {children}
-         </div>
+         {children}
       </div>
    );
 }

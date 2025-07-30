@@ -45,17 +45,19 @@ const menuItems = [
 ];
 
 const users = [
-   { id: "u101", serial: 1, name: "Alice Johnson", email: "alice.johnson@example.com", phone: "01711-111111" },
-   { id: "u102", serial: 2, name: "Bob Smith", email: "bob.smith@example.com", phone: "01711-222222" },
-   { id: "u103", serial: 3, name: "Charlie Ahmed", email: "charlie.ahmed@example.com", phone: "01711-333333" },
-   { id: "u104", serial: 4, name: "Diana Roy", email: "diana.roy@example.com", phone: "01711-444444" },
-   { id: "u105", serial: 5, name: "Ethan Das", email: "ethan.das@example.com", phone: "01711-555555" },
-   { id: "u106", serial: 6, name: "Faria Noor", email: "faria.noor@example.com", phone: "01711-666666" },
-   { id: "u107", serial: 7, name: "George Karim", email: "george.karim@example.com", phone: "01711-777777" },
-   { id: "u108", serial: 8, name: "Hannah Begum", email: "hannah.begum@example.com", phone: "01711-888888" },
-   { id: "u109", serial: 9, name: "Imran Hossain", email: "imran.hossain@example.com", phone: "01711-999999" },
-   { id: "u110", serial: 10, name: "Jannat Islam", email: "jannat.islam@example.com", phone: "01711-000000" }
+   { id: "u101", serial: 1, name: "Alice Johnson", email: "alice.johnson@example.com", userType: "user" },
+   { id: "u102", serial: 2, name: "Bob Smith", email: "bob.smith@example.com", userType: "driver" },
+   { id: "u103", serial: 3, name: "Charlie Ahmed", email: "charlie.ahmed@example.com", userType: "driver" },
+   { id: "u104", serial: 4, name: "Diana Roy", email: "diana.roy@example.com", userType: "user" },
+   { id: "u105", serial: 5, name: "Ethan Das", email: "ethan.das@example.com", userType: "driver" },
+   { id: "u106", serial: 6, name: "Faria Noor", email: "faria.noor@example.com", userType: "user" },
+   { id: "u107", serial: 7, name: "George Karim", email: "george.karim@example.com", userType: "user" },
+   { id: "u108", serial: 8, name: "Hannah Begum", email: "hannah.begum@example.com", userType: "user" },
+   { id: "u109", serial: 9, name: "Imran Hossain", email: "imran.hossain@example.com", userType: "user" },
+   { id: "u110", serial: 10, name: "Jannat Islam", email: "jannat.islam@example.com", userType: "driver" }
 ];
+
+
 
 
 export { menuItems, users };

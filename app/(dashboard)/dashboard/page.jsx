@@ -10,5 +10,5 @@ export default function Dashboard() {
       <OverviewBarCharts />
       <UsersTable caption="Recent Users" users={users} />
     </div>
-  )
+  );
 }

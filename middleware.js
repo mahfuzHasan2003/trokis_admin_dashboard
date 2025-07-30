@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 
 export function middleware(request) {
-   const isLoggedIn = false;
+   const isLoggedIn = true;
    const { pathname } = request.nextUrl;
 
    // Routes that should be accessible without login

@@ -1,13 +1,21 @@
 "use client";
+import EmailField from "@/components/auth/email-field";
+import PasswordField from "@/components/auth/password-field";
 import { Input } from "@/components/ui/input";
-import { Eye, EyeOff, KeyRound, Mail } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
+import { toast } from "sonner";
 
 export default function SignIn() {
-  const [showPassword, setShowPassword] = useState(false);
-  function handleSignIn() {
-    // console.log();
+  async function handleSignIn(e) {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const email = formData.get("email");
+    const password = formData.get("password");
+    if (!email || !password) {
+      toast.error("Please fill out both fields.");
+      return;
+    }
+    console.log(email, password);
   }
 
   return (
@@ -18,36 +26,10 @@ export default function SignIn() {
       <h2 className="text-center mb-8 text-2xl font-semibold">Sign In</h2>
 
       {/* email field */}
-      <div className="relative mb-3">
-        <Mail
-          className="absolute top-1/2 transform -translate-y-1/2 text-muted-foreground left-3"
-          size={20}
-        />
-        <Input
-          placeholder="Enter Your Email"
-          type="email"
-          className="rounded-full pl-10"
-        />
-      </div>
+      <EmailField name="email" />
 
       {/* Passoword Field */}
-      <div className="relative">
-        <KeyRound
-          className="absolute top-1/2 transform -translate-y-1/2 text-muted-foreground left-3"
-          size={20}
-        />
-        <Input
-          placeholder="Enter Your Password"
-          type={!showPassword ? "password" : "text"}
-          className="rounded-full px-10"
-        />
-        <div
-          className="absolute top-1/2 transform -translate-y-1/2 right-3 text-muted-foreground cursor-pointer"
-          onClick={() => setShowPassword(!showPassword)}
-        >
-          {!showPassword ? <EyeOff /> : <Eye />}
-        </div>
-      </div>
+      <PasswordField name="password" />
 
       {/* forgot password */}
       <p className="text-right">

@@ -1,5 +1,6 @@
 "use client";
 import EmailField from "@/components/auth/email-field";
+import FormSubmitBtn from "@/components/auth/form-submit-btn";
 import PasswordField from "@/components/auth/password-field";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
@@ -26,7 +27,7 @@ export default function SignIn() {
       <h2 className="text-center mb-8 text-2xl font-semibold">Sign In</h2>
 
       {/* email field */}
-      <EmailField name="email" />
+      <EmailField />
 
       {/* Passoword Field */}
       <PasswordField name="password" />
@@ -39,10 +40,7 @@ export default function SignIn() {
       </p>
 
       {/* submit btn */}
-      <Input
-        type="submit"
-        className="cursor-pointer bg-foreground text-background rounded-full hover:bg-foreground/90 mt-5"
-      />
+      <FormSubmitBtn btnText="Sign In" />
     </form>
   );
 }

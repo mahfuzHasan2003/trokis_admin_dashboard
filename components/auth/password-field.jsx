@@ -2,7 +2,11 @@ import { Eye, EyeOff, KeyRound } from "lucide-react";
 import { Input } from "../ui/input";
 import { useState } from "react";
 
-export default function PasswordField({ name }) {
+export default function PasswordField({
+  name,
+  placeholder = "Enter Your Password",
+  ...props
+}) {
   const [showPassword, setShowPassword] = useState(false);
   return (
     <div className="relative">
@@ -11,10 +15,11 @@ export default function PasswordField({ name }) {
         size={20}
       />
       <Input
-        placeholder="Enter Your Password"
+        placeholder={placeholder}
         type={!showPassword ? "password" : "text"}
         className="rounded-full px-10"
         name={name}
+        {...props}
       />
       <div
         className="absolute top-1/2 transform -translate-y-1/2 right-3 text-muted-foreground cursor-pointer"

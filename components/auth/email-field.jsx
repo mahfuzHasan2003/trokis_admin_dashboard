@@ -1,7 +1,7 @@
 import { Mail } from "lucide-react";
 import { Input } from "../ui/input";
 
-export default function EmailField({ name }) {
+export default function EmailField({ name = "email" }) {
   return (
     <div className="relative mb-3">
       <Mail
